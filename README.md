@@ -18,7 +18,7 @@ Wei He, Jiaqing Fan<sup>*</sup>, Zhengtong Zhu, Fanzhang Li
 
 Existing two-stage referring video object segmentation (RVOS) methods are prone to semantic hijacking, mainly due to inadequate sampling strategies and isolated feature extraction. As linguistic priors dominate visual evidence, local distractors can override the target identity and cause persistent drift during mask propagation. To address this, we propose DAP-Mamba (Dynamic Anchor Prompting with Bi-Phasic Mamba), a spatiotemporal synergistic framework for RVOS. Specifically, we first introduce Dynamic High-Fidelity Anchor Sampling, which adaptively selects reliable anchor frames via macro-temporal windowing and joint multimodal scoring. Furthermore, we develop a Bi-Phasic Mamba Synergy mechanism for robust spatiotemporal modeling. To prevent feature homogenization in long-sequence modeling, we decouple the feature space into a macro-temporal phase for global trajectory tracking and a micro-motion phase for short-term motion modeling. Additionally, Trajectory-Aware Gated Prompting is developed to refine anchor features using global video priors and trajectory-aware positional encodings to facilitate cross-frame interaction, producing reliable prompts that reduce semantic ambiguity and mitigate error propagation. Extensive experiments across five benchmarks demonstrate the effectiveness of DAP-Mamba and the proposed modules, showing strong performance in scenarios with complex motion and multiple similar objects.
 
-## Demo Video
+## Demo Videos
 
 <table>
   <tr>
@@ -59,13 +59,13 @@ Run the Python entry points directly from the repository root.
 
 ```bash
 # Ref-Youtube-VOS / YTVOS-style training
-deepspeed --master_port 29502 --num_gpus 2 train/train_ytvos.py
+deepspeed --num_gpus 2 train/train_ytvos.py
 
 # MeVIS training
-deepspeed --master_port 29502 --num_gpus 2 train/train_mevis.py
+deepspeed --num_gpus 2 train/train_mevis.py
 
 # A2D-Sentences training
-deepspeed --master_port 29502 --num_gpus 2 train/train_a2d.py
+deepspeed --num_gpus 2 train/train_a2d.py
 ```
 
 Default checkpoint outputs:
