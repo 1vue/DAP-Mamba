@@ -1,0 +1,8 @@
+models/pretrainedModels/
+weights/*
+scripts/*
+*.sh
+*.txt
+*.idea
+/models/segment_anything/compare/
+/models/sam2/
