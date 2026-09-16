@@ -33,10 +33,10 @@ Existing two-stage referring video object segmentation (RVOS) methods are prone 
 
 ## Highlights
 
-- DAP-Mamba achieves state-of-the-art performance on multiple RVOS benchmarks.
-- Dynamic anchor sampling selects clear frames aligned with the language query.
-- Bi-phasic Mamba captures global temporal context and preserves local motion details.
-- Trajectory-aware gated prompting refines anchor features with global video priors.
+- DAP-Mamba achieves state-of-the-art results on multiple RVOS benchmarks.
+- Dynamic anchor sampling selects sharp frames aligned with language cues.
+- Bi-phasic Mamba models global temporal context and retains local motion.
+- Trajectory-aware gated prompting integrates anchor features with video priors.
 
 ## Requirements
 
