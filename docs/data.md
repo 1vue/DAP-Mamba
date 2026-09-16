@@ -69,16 +69,21 @@ DAP-Mamba
 Unzip these files:
 
 ```bash
-cd ../../dataset/davis
 unzip -o davis_text_annotations.zip
 unzip -o DAVIS-2017_semantics-480p.zip
 unzip -o DAVIS-2017-Unsupervised-trainval-480p.zip
 ```
 
-The inference and evaluation scripts expect the DAVIS root to be available as:
+Preprocess the dataset to Ref-Youtube-VOS format. (Make sure you are in the main directory)
 
-```text
-../../dataset/davis/DAVIS
+```
+python tools/convert_davis_to_ytvos.py
+```
+
+Finally, unzip the file `DAVIS-2017-Unsupervised-trainval-480p.zip` again (since we use `mv` in preprocess for efficiency).
+
+```
+unzip -o DAVIS-2017-Unsupervised-trainval-480p.zip
 ```
 
 ## A2D-Sentences
